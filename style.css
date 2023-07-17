@@ -1,0 +1,147 @@
+:root {
+  font-size: 62.5%;
+
+  --accentPurple: hsla(262, 94%, 67%, 1);
+  --accentWhite: hsla(0, 0%, 92%, 1);
+  --greyAccentDisplay: hsla(0, 0%, 42%, 1);
+  --darkBgColor: hsla(254, 13%, 19%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(
+    180deg,
+    hsl(242, 45%, 65%) 0%,
+    hsl(252, 45%, 65%) 100%
+  );
+
+  height: 100vh;
+  width: 100vh;
+
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+
+body * {
+  font-family: "Rubik", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+#calculator {
+  width: 35.6rem;
+  height: 56.6rem;
+
+  background: var(--darkBgColor);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04),
+    0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26),
+    0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1),
+    inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+
+  border-radius: 48px;
+}
+
+#display {
+  margin-top: 5.4rem;
+  padding-inline: 5.4rem;
+}
+
+#lastResult {
+  text-align: right;
+  font-size: 2rem;
+  line-height: 140%;
+  color: var(--greyAccentDisplay);
+}
+
+#result {
+  display: flex;
+  justify-content: space-between;
+}
+
+#result span {
+  font-size: 3.6rem;
+  line-height: 140%;
+  color: var(--accentWhite);
+  margin: 0.8rem 0 2.6rem;
+}
+
+#keyboard {
+  margin-inline: 3.2rem;
+  padding-bottom: 3.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+button {
+  border: 0;
+  width: 6.4rem;
+  height: 6.4rem;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #2d2a37;
+
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04),
+    0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26),
+    0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+
+  border-radius: 999px;
+
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+
+  color: var(--accentWhite);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 150ms;
+}
+
+button:hover {
+  filter:saturate(50%);
+}
+
+.btnTextPurple {
+  color: var(--accentPurple);
+}
+
+.btnDarkPurple {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0.01%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #462878;
+
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04),
+    0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26),
+    0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+}
+
+.btnLightPurple {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #7f45e2;
+
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04),
+    0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26),
+    0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+}
