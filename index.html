@@ -1,69 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-  <body>
-    <div id="calculator">
-      <div id="display">
-        <div id="lastResult">1 + 1</div>
-        <div id="result">
-          <img
-            src="./assets/Equals.svg"
-            alt="sinal de igual ao lado do resultado"
-          />
-          <span>2</span>
-        </div>
-      </div>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+</head>
 
-      <div id="keyboard">
-        <button class="btnTextPurple">CE</button>
-        <button>C</button>
-        <button>
-          <img src="./assets/percent.svg" alt="icone de porcentagem" />
-        </button>
-        <button class="btnDarkPurple">
-          <img src="./assets/divide.svg" alt="icone de divisão" />
-        </button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="btnDarkPurple">
-          <img src="./assets/times.svg" alt="icone de multiplicação" />
-        </button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="btnDarkPurple">
-          <img src="./assets/minus.svg" alt="icone de subtração" />
-        </button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="btnDarkPurple">
-          <img src="./assets/plus.svg" alt="icone de soma" />
-        </button>
-        <button>
-          <img src="./assets/plusMinus.svg" alt="icone de mais ou menos" />
-        </button>
-        <button>0</button>
-        <button>,</button>
-        <button class="btnLightPurple">
-          <img src="./assets/equalsLight.svg" alt="icone de igual" />
-        </button>
+<body>
+  <div id="calculator">
+    <div id="display">
+      <div id="result">
+        <img src="./assets/Equals.svg" alt="sinal de igual ao lado do resultado" />
+        <input id="displayResult" readonly>
       </div>
     </div>
-  </body>
+
+    <div id="keyboard">
+
+      <button class="btnTextPurple" onclick="clearDisplay()">C</button>
+      <button onclick="append(Math.PI.toFixed(2))">π</button>
+      <button onclick="append(Math.E.toFixed(2))">e</button>
+      <button onclick="append('/')" class="btnDarkPurple">
+        <img src="./assets/divide.svg" alt="icone de divisão" />
+      </button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')" class="btnDarkPurple">
+        <img src="./assets/times.svg" alt="icone de multiplicação" />
+      </button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')" class="btnDarkPurple">
+        <img src="./assets/minus.svg" alt="icone de subtração" />
+      </button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')" class="btnDarkPurple">
+        <img src="./assets/plus.svg" alt="icone de soma" />
+      </button>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="append('%')">
+        <img src="./assets/percent.svg" alt="icone de porcentagem" />
+      </button>
+      <button onclick="calculate()" class="btnLightPurple">
+        <img src="./assets/equalsLight.svg" alt="icone de igual" />
+      </button>
+
+
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
 </html>
