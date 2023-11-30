@@ -1,5 +1,6 @@
-GitHub Copilot: # Calculator
+# Calculator
 
+![preview](./assets/preview.png)
 This is a simple calculator project implemented in JavaScript. The calculator provides basic arithmetic operations such as addition, subtraction, multiplication, and division. It also includes a percentage function.
 
 ## Usage
