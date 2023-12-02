@@ -1,9 +1,9 @@
 const displayResult = document.getElementById("displayResult");
-const operations = ["+", "-", "*", "/", "%"];
+const operations = ["+", "-", "*", "/", "/100"];
 
 function append(value) {
   const lastChar = displayResult.value.slice(-1);
-  if (displayResult.value === "Erro") clearDisplay();
+  if (displayResult.value === "erro") clearDisplay();
   if (operations.includes(lastChar) && operations.includes(value)) {
     displayResult.value = displayResult.value.slice(0, -1) + value;
   } else if (!operations.includes(lastChar) || !operations.includes(value)) {
@@ -16,10 +16,13 @@ function clearDisplay() {
 
 function calculate() {
   try {
-    displayResult.value = eval(displayResult.value).toFixed(5);
-    if (displayResult.value === "Infinity") throw new Error("Divisão por zero");
-    if (isNaN(displayResult.value)) throw new Error("Erro de operação");
+    Number.isInteger(eval(displayResult.value))
+      ? (displayResult.value = eval(displayResult.value))
+      : (displayResult.value = eval(displayResult.value).toFixed(5));
+
+    if (displayResult.value === "Infinity") throw new Error("Divsion by 0");
+    if (isNaN(displayResult.value)) throw new Error("Invalid operation");
   } catch (err) {
-    displayResult.value = "Erro";
+    displayResult.value = "erro";
   }
 }
